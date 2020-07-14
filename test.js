@@ -1,3 +1,16 @@
+require("appdynamics").profile({
+ controllerHostName: 'apm-demo-dynamics-5940.saas.appdynamics.com',
+ controllerPort: 443,
+
+ // If SSL, be sure to enable the next line
+ controllerSslEnabled: true,
+ accountName: 'apm-demo-dynamics-5940',
+ accountAccessKey: '8lxkegqvcs4f',
+ applicationName: 'apm-demo-dynamics',
+ tierName: 'webtier',
+ nodeName: 'process' // The controller will automatically append the node name with a unique number
+});
+
 const { spawn } = require('child_process');
 const got = require('got');
 const test = require('tape');
